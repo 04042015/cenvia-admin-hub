@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Dashboard from "./pages/admin/Dashboard";
+import Posts from "./pages/admin/Posts";
+import Payroll from "./pages/admin/Payroll";
 import { AdminLayout } from "./components/layout/AdminLayout";
 
 const queryClient = new QueryClient();
@@ -27,6 +29,16 @@ const App = () => (
           <Route path="/admin" element={
             <AdminLayout>
               <Dashboard />
+            </AdminLayout>
+          } />
+          <Route path="/admin/posts" element={
+            <AdminLayout>
+              <Posts />
+            </AdminLayout>
+          } />
+          <Route path="/admin/payroll" element={
+            <AdminLayout>
+              <Payroll />
             </AdminLayout>
           } />
           
